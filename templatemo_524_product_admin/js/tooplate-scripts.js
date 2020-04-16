@@ -9,11 +9,11 @@ function drawLineChart() {
           {
             scaleLabel: {
               display: true,
-              labelString: "Hits"
-            }
-          }
-        ]
-      }
+              labelString: "Hits",
+            },
+          },
+        ],
+      },
     };
 
     // Set aspect ratio based on window width
@@ -30,36 +30,36 @@ function drawLineChart() {
           "April",
           "May",
           "June",
-          "July"
+          "July",
         ],
         datasets: [
           {
-            label: "Latest Hits",
+            label: "Accessories",
             data: [88, 68, 79, 57, 50, 55, 70],
             fill: false,
             borderColor: "rgb(75, 192, 192)",
             cubicInterpolationMode: "monotone",
-            pointRadius: 0
+            pointRadius: 0,
           },
           {
-            label: "Popular Hits",
+            label: "Fashion",
             data: [33, 45, 37, 21, 55, 74, 69],
             fill: false,
             borderColor: "rgba(255,99,132,1)",
             cubicInterpolationMode: "monotone",
-            pointRadius: 0
+            pointRadius: 0,
           },
           {
-            label: "Featured",
+            label: "Electronics",
             data: [44, 19, 38, 46, 85, 66, 79],
             fill: false,
             borderColor: "rgba(153, 102, 255, 1)",
             cubicInterpolationMode: "monotone",
-            pointRadius: 0
-          }
-        ]
+            pointRadius: 0,
+          },
+        ],
       },
-      options: optionsLine
+      options: optionsLine,
     };
 
     lineChart = new Chart(ctxLine, configLine);
@@ -77,15 +77,15 @@ function drawBarChart() {
           {
             barPercentage: 0.2,
             ticks: {
-              beginAtZero: true
+              beginAtZero: true,
             },
             scaleLabel: {
               display: true,
-              labelString: "Hits"
-            }
-          }
-        ]
-      }
+              labelString: "Hits",
+            },
+          },
+        ],
+      },
     };
 
     optionsBar.maintainAspectRatio =
@@ -105,7 +105,15 @@ function drawBarChart() {
     configBar = {
       type: "horizontalBar",
       data: {
-        labels: ["Red", "Aqua", "Green", "Yellow", "Purple", "Orange", "Blue"],
+        labels: [
+          "Iphone XS",
+          "Nike Sport Shoes",
+          "Supreme T-Shirt",
+          "Samsung Evo SSD",
+          "HTC Vive Pro VR",
+          "RCM PRO",
+          "Nvidia RTX 2080 Super",
+        ],
         datasets: [
           {
             label: "# of Hits",
@@ -117,13 +125,13 @@ function drawBarChart() {
               "#D7D768",
               "#9D66CC",
               "#DB9C3F",
-              "#3889FC"
+              "#3889FC",
             ],
-            borderWidth: 0
-          }
-        ]
+            borderWidth: 0,
+          },
+        ],
       },
-      options: optionsBar
+      options: optionsBar,
     };
 
     barChart = new Chart(ctxBar, configBar);
@@ -146,12 +154,12 @@ function drawPieChart() {
           left: 10,
           right: 10,
           top: 10,
-          bottom: 10
-        }
+          bottom: 10,
+        },
       },
       legend: {
-        position: "top"
-      }
+        position: "top",
+      },
     };
 
     configPie = {
@@ -161,16 +169,16 @@ function drawPieChart() {
           {
             data: [18.24, 6.5, 9.15],
             backgroundColor: ["#F7604D", "#4ED6B8", "#A8D582"],
-            label: "Storage"
-          }
+            label: "Storage",
+          },
         ],
         labels: [
-          "Used Storage (18.240GB)",
-          "System Storage (6.500GB)",
-          "Available Storage (9.150GB)"
-        ]
+          "Fashion (5,000)",
+          "Accessories (15,000)",
+          "Electronics (65,000)",
+        ],
       },
-      options: optionsPie
+      options: optionsPie,
     };
 
     pieChart = new Chart(ctxPie, configPie);

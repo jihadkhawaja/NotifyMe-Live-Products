@@ -26,7 +26,21 @@
       <nav class="navbar navbar-expand-xl">
         <div class="container h-100">
           <a class="navbar-brand" href="index.html">
-            <h1 class="tm-site-title mb-0">{Date}</h1>
+            <h1 id="date" class="tm-site-title mb-0">{Date}</h1>
+            <script>
+              n = new Date();
+              y = n.getFullYear();
+              m = n.getMonth() + 1;
+              d = n.getDate();
+              document.getElementById("date").innerHTML =
+                "Latest Update " +
+                "\xa0\xa0\xa0\xa0\xa0\xa0\xa0" +
+                m +
+                "/" +
+                d +
+                "/" +
+                y;
+            </script>
           </a>
           <button
             class="navbar-toggler ml-auto mr-0"
@@ -39,37 +53,14 @@
           >
             <i class="fas fa-bars tm-nav-icon"></i>
           </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto h-100">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  <i class="fas fa-tachometer-alt"></i>
-                  Today
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  <i class="fas fa-tachometer-alt"></i>
-                  Last Week
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="products.html">
-                  <i class="fas fa-shopping-cart"></i>
-                  Products
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
       <div class="container">
         <div class="row">
           <div class="col">
-            <p class="text-white mt-5 mb-5">Welcome back, <b>{User}</b></p>
+            <p class="text-white mt-5 mb-5">
+              NotifyMe <b>Whishlist Statistics</b>
+            </p>
           </div>
         </div>
         <!-- row -->
@@ -103,7 +94,7 @@
             <div
               class="tm-bg-primary-dark tm-block tm-block-taller tm-block-overflow"
             >
-              <h2 class="tm-block-title">Latest Wihslisted Products</h2>
+              <h2 class="tm-block-title">Latest Wishlisted Products</h2>
               <div class="tm-notification-items">
                 <div class="media tm-notification-item">
                   <div class="tm-gray-circle">
@@ -115,167 +106,7 @@
                   </div>
                   <div class="media-body">
                     <p class="mb-2">
-                      <b>Jessica</b> and <b>6 others</b> sent you new
-                      <a href="#" class="tm-notification-link"
-                        >product updates</a
-                      >. Check new orders.
-                    </p>
-                    <span class="tm-small tm-text-color-secondary"
-                      >6h ago.</span
-                    >
-                  </div>
-                </div>
-                <div class="media tm-notification-item">
-                  <div class="tm-gray-circle">
-                    <img
-                      src="img/notification-02.jpg"
-                      alt="Avatar Image"
-                      class="rounded-circle"
-                    />
-                  </div>
-                  <div class="media-body">
-                    <p class="mb-2">
-                      <b>Oliver Too</b> and <b>6 others</b> sent you existing
-                      <a href="#" class="tm-notification-link"
-                        >product updates</a
-                      >. Read more reports.
-                    </p>
-                    <span class="tm-small tm-text-color-secondary"
-                      >6h ago.</span
-                    >
-                  </div>
-                </div>
-                <div class="media tm-notification-item">
-                  <div class="tm-gray-circle">
-                    <img
-                      src="img/notification-03.jpg"
-                      alt="Avatar Image"
-                      class="rounded-circle"
-                    />
-                  </div>
-                  <div class="media-body">
-                    <p class="mb-2">
-                      <b>Victoria</b> and <b>6 others</b> sent you
-                      <a href="#" class="tm-notification-link">order updates</a
-                      >. Read order information.
-                    </p>
-                    <span class="tm-small tm-text-color-secondary"
-                      >6h ago.</span
-                    >
-                  </div>
-                </div>
-                <div class="media tm-notification-item">
-                  <div class="tm-gray-circle">
-                    <img
-                      src="img/notification-01.jpg"
-                      alt="Avatar Image"
-                      class="rounded-circle"
-                    />
-                  </div>
-                  <div class="media-body">
-                    <p class="mb-2">
-                      <b>Laura Cute</b> and <b>6 others</b> sent you
-                      <a href="#" class="tm-notification-link"
-                        >product records</a
-                      >.
-                    </p>
-                    <span class="tm-small tm-text-color-secondary"
-                      >6h ago.</span
-                    >
-                  </div>
-                </div>
-                <div class="media tm-notification-item">
-                  <div class="tm-gray-circle">
-                    <img
-                      src="img/notification-02.jpg"
-                      alt="Avatar Image"
-                      class="rounded-circle"
-                    />
-                  </div>
-                  <div class="media-body">
-                    <p class="mb-2">
-                      <b>Samantha</b> and <b>6 others</b> sent you
-                      <a href="#" class="tm-notification-link">order stuffs</a>.
-                    </p>
-                    <span class="tm-small tm-text-color-secondary"
-                      >6h ago.</span
-                    >
-                  </div>
-                </div>
-                <div class="media tm-notification-item">
-                  <div class="tm-gray-circle">
-                    <img
-                      src="img/notification-03.jpg"
-                      alt="Avatar Image"
-                      class="rounded-circle"
-                    />
-                  </div>
-                  <div class="media-body">
-                    <p class="mb-2">
-                      <b>Sophie</b> and <b>6 others</b> sent you
-                      <a href="#" class="tm-notification-link"
-                        >product updates</a
-                      >.
-                    </p>
-                    <span class="tm-small tm-text-color-secondary"
-                      >6h ago.</span
-                    >
-                  </div>
-                </div>
-                <div class="media tm-notification-item">
-                  <div class="tm-gray-circle">
-                    <img
-                      src="img/notification-01.jpg"
-                      alt="Avatar Image"
-                      class="rounded-circle"
-                    />
-                  </div>
-                  <div class="media-body">
-                    <p class="mb-2">
-                      <b>Lily A</b> and <b>6 others</b> sent you
-                      <a href="#" class="tm-notification-link"
-                        >product updates</a
-                      >.
-                    </p>
-                    <span class="tm-small tm-text-color-secondary"
-                      >6h ago.</span
-                    >
-                  </div>
-                </div>
-                <div class="media tm-notification-item">
-                  <div class="tm-gray-circle">
-                    <img
-                      src="img/notification-02.jpg"
-                      alt="Avatar Image"
-                      class="rounded-circle"
-                    />
-                  </div>
-                  <div class="media-body">
-                    <p class="mb-2">
-                      <b>Amara</b> and <b>6 others</b> sent you
-                      <a href="#" class="tm-notification-link"
-                        >product updates</a
-                      >.
-                    </p>
-                    <span class="tm-small tm-text-color-secondary"
-                      >6h ago.</span
-                    >
-                  </div>
-                </div>
-                <div class="media tm-notification-item">
-                  <div class="tm-gray-circle">
-                    <img
-                      src="img/notification-03.jpg"
-                      alt="Avatar Image"
-                      class="rounded-circle"
-                    />
-                  </div>
-                  <div class="media-body">
-                    <p class="mb-2">
-                      <b>Cinthela</b> and <b>6 others</b> sent you
-                      <a href="#" class="tm-notification-link"
-                        >product updates</a
-                      >.
+                      <b>Iphone 11</b> has been wishlisted by <b>6 users</b>
                     </p>
                     <span class="tm-small tm-text-color-secondary"
                       >6h ago.</span
@@ -294,25 +125,21 @@
                 <thead>
                   <tr>
                     <th scope="col">LOCATION</th>
-                    <th scope="col">START DATE</th>
-                    <th scope="col">EST DELIVERY DUE</th>
+                    <th scope="col">WISHLIST DATE</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td><b>Lebanon, Tripoli</b></td>
-                    <td>16:00, 12 NOV 2018</td>
-                    <td>08:00, 18 NOV 2018</td>
+                    <td>05:00, 12 NOV 2020</td>
                   </tr>
                   <tr>
                     <td><b>Lebanon, Beirut</b></td>
-                    <td>16:00, 12 NOV 2018</td>
-                    <td>08:00, 18 NOV 2018</td>
+                    <td>13:00, 10 SEP 2019</td>
                   </tr>
                   <tr>
                     <td><b>UK, London</b></td>
-                    <td>16:00, 12 NOV 2018</td>
-                    <td>08:00, 18 NOV 2018</td>
+                    <td>09:30, 05 OCT 2018</td>
                   </tr>
                 </tbody>
               </table>
